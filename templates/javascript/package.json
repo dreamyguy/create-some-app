@@ -1,0 +1,15 @@
+{
+  "name": "javascript-templates",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wallace Sidhrée <i@dreamyguy.com> (https://sidhree.com)",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
