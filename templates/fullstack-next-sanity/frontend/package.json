@@ -1,0 +1,37 @@
+{
+  "name": "<% replace with project name kebab-case %>-frontend",
+  "version": "1.1.0",
+  "description": "<% replace with project description %>",
+  "private": false,
+  "keywords": [
+    "create-some-app",
+    "cli app",
+    "cli starter",
+    "cli scaffolder",
+    "cli bootstrapper",
+    "fullstack next sanity",
+    "next sanity",
+    "next",
+    "sanity",
+    "fullstack"
+  ],
+  "author": "Wallace Sidhrée <i@dreamyguy.com> (https://github.com/dreamyguy)",
+  "homepage": "<% replace with site url %>",
+  "repository": {
+    "type": "git",
+    "url": "<% replace with project repo full url ssh %>"
+  },
+  "license": "MIT",
+  "copyright": "Copyright (c) Wallace Sidhrée & <% replace with owners name %> - All rights reserved.",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "^v<% replace with node version %>"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not op_mini all"
+  ]
+}

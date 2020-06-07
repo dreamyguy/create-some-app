@@ -1,0 +1,67 @@
+{
+  "name": "<% replace with project name kebab-case %>-backend",
+  "version": "1.1.0",
+  "description": "<% replace with project description %>",
+  "private": false,
+  "keywords": [
+    "create-some-app",
+    "cli app",
+    "cli starter",
+    "cli scaffolder",
+    "cli bootstrapper",
+    "fullstack gatsby sanity",
+    "gatsby sanity",
+    "gatsby",
+    "sanity",
+    "fullstack"
+  ],
+  "author": "Wallace Sidhrée <i@dreamyguy.com> (https://github.com/dreamyguy)",
+  "homepage": "<% replace with site url %>",
+  "repository": {
+    "type": "git",
+    "url": "<% replace with project repo full url ssh %>"
+  },
+  "license": "MIT",
+  "copyright": "Copyright (c) Wallace Sidhrée & <% replace with owners name %> - All rights reserved.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "gatsby clean",
+    "start": "yarn clean && gatsby develop",
+    "build": "gatsby clean && gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.19.18",
+    "gatsby-image": "^2.2.41",
+    "gatsby-plugin-manifest": "^2.2.41",
+    "gatsby-plugin-offline": "^3.0.35",
+    "gatsby-plugin-postcss": "^2.1.20",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-source-sanity": "^5.0.5",
+    "gatsby-transformer-sharp": "^2.3.14",
+    "node-sass": "^4.13.1",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.1.2",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/image-url": "^0.140.18",
+    "console-log-plus": "^1.0.7",
+    "gatsby-plugin-eslint": "^2.0.8"
+  },
+  "engines": {
+    "node": "^v<% replace with node version %>"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not op_mini all"
+  ]
+}

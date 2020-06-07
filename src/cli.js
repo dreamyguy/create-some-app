@@ -1,9 +1,11 @@
 import arg from "arg";
 import inquirer from "inquirer";
-import { createSomeApp } from "./main";
+import kebabCase from "just-kebab-case";
+import { createSomeApp, getDefaultValue } from "./main";
+import defaults from "./defaults";
 
 // TODO: This should preferably come from a config, with sensible default values
-const defaultTemplate = "JavaScript";
+const defaultTemplate = "Fullstack Gatsby Sanity";
 
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg(
@@ -14,6 +16,16 @@ function parseArgumentsIntoOptions(rawArgs) {
       "-g": "--git",
       "-y": "--yes",
       "-i": "--install",
+      "--gatsbyDefaultEnvironment": String,
+      "--nodeVersion": String,
+      "--ownersName": String,
+      "--projectName": String,
+      "--projectDescription": String,
+      "--repoOwner": String,
+      "--sanityAuthToken": String,
+      "--sanityProjectId": String,
+      "--sanityDataset": String,
+      "--siteUrl": String,
     },
     {
       argv: rawArgs.slice(2),
@@ -24,6 +36,16 @@ function parseArgumentsIntoOptions(rawArgs) {
     git: args["--git"] || false,
     template: args._[0],
     runInstall: args["--install"] || false,
+    gatsbyDefaultEnvironment: args["--gatsbyDefaultEnvironment"],
+    nodeVersion: args["--nodeVersion"],
+    ownersName: args["--ownersName"],
+    projectName: args["--projectName"],
+    projectDescription: args["--projectDescription"],
+    repoOwner: args["--repoOwner"],
+    sanityAuthToken: args["--sanityAuthToken"],
+    sanityProjectId: args["--sanityProjectId"],
+    sanityDataset: args["--sanityDataset"],
+    siteUrl: args["--siteUrl"],
   };
 }
 
@@ -33,6 +55,23 @@ async function prompForMissingOptions(options) {
     return {
       ...options,
       template: options.template || defaultTemplate,
+      gatsbyDefaultEnvironment:
+        options.gatsbyDefaultEnvironment ||
+        getDefaultValue("gatsbyDefaultEnvironment"),
+      nodeVersion: options.nodeVersion || getDefaultValue("nodeVersion"),
+      ownersName: options.ownersName || getDefaultValue("ownersName"),
+      projectName: options.projectName || getDefaultValue("projectName"),
+      projectDescription:
+        options.projectDescription || getDefaultValue("projectDescription"),
+      repoOwner:
+        (options.repoOwner && kebabCase(options.repoOwner)) ||
+        getDefaultValue("repoOwner"),
+      sanityAuthToken:
+        options.sanityAuthToken || getDefaultValue("sanityAuthToken"),
+      sanityProjectId:
+        options.sanityProjectId || getDefaultValue("sanityProjectId"),
+      sanityDataset: options.sanityDataset || getDefaultValue("sanityDataset"),
+      siteUrl: options.siteUrl || getDefaultValue("siteUrl"),
     };
   }
   // Define prompt questions
@@ -42,10 +81,133 @@ async function prompForMissingOptions(options) {
       type: "list",
       name: "template",
       message: "Please choose which project template to use",
-      choices: ["JavaScript", "TypeScript"],
+      choices: ["Fullstack Gatsby Sanity", "Fullstack Next Sanity"],
       default: defaultTemplate,
     });
   }
+  defaults.map((def) => {
+    if (
+      !options.gatsbyDefaultEnvironment &&
+      def.name === "gatsbyDefaultEnvironment" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.nodeVersion &&
+      def.name === "nodeVersion" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.ownersName &&
+      def.name === "ownersName" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.projectName &&
+      def.name === "projectName" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.projectDescription &&
+      def.name === "projectDescription" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.repoOwner &&
+      def.name === "repoOwner" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: kebabCase(def.default),
+      });
+    }
+    if (
+      !options.sanityAuthToken &&
+      def.name === "sanityAuthToken" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.sanityProjectId &&
+      def.name === "sanityProjectId" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.sanityDataset &&
+      def.name === "sanityDataset" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    if (
+      !options.siteUrl &&
+      def.name === "siteUrl" &&
+      questions.some((e) => e.name !== def.name)
+    ) {
+      questions.push({
+        type: "input",
+        name: def.name,
+        message: def.message,
+        default: def.default,
+      });
+    }
+    return null;
+  });
   if (!options.git) {
     questions.push({
       type: "confirm",
@@ -61,6 +223,20 @@ async function prompForMissingOptions(options) {
     ...options,
     template: options.template || answers.template,
     git: options.git || answers.git,
+    gatsbyDefaultEnvironment:
+      options.gatsbyDefaultEnvironment || answers.gatsbyDefaultEnvironment,
+    nodeVersion: options.nodeVersion || answers.nodeVersion,
+    ownersName: options.ownersName || answers.ownersName,
+    projectName: options.projectName || answers.projectName,
+    projectDescription:
+      options.projectDescription || answers.projectDescription,
+    repoOwner:
+      (options.repoOwner && kebabCase(options.repoOwner)) ||
+      (answers.repoOwner && kebabCase(answers.repoOwner)),
+    sanityAuthToken: options.sanityAuthToken || answers.sanityAuthToken,
+    sanityProjectId: options.sanityProjectId || answers.sanityProjectId,
+    sanityDataset: options.sanityDataset || answers.sanityDataset,
+    siteUrl: options.siteUrl || answers.siteUrl,
   };
 }
 

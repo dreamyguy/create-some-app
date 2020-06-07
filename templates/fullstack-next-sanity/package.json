@@ -1,0 +1,44 @@
+{
+  "name": "<% replace with project name kebab-case %>",
+  "version": "1.1.0",
+  "description": "<% replace with project description %>",
+  "private": false,
+  "keywords": [
+    "create-some-app",
+    "cli app",
+    "cli starter",
+    "cli scaffolder",
+    "cli bootstrapper",
+    "fullstack next sanity",
+    "next sanity",
+    "next",
+    "sanity",
+    "fullstack"
+  ],
+  "author": "Wallace Sidhrée <i@dreamyguy.com> (https://github.com/dreamyguy)",
+  "homepage": "<% replace with site url %>",
+  "repository": {
+    "type": "git",
+    "url": "<% replace with project repo full url ssh %>"
+  },
+  "license": "MIT",
+  "copyright": "Copyright (c) Wallace Sidhrée & <% replace with owners name %> - All rights reserved.",
+  "main": "config.js",
+  "scripts": {
+    "deploy": "npm run deploy:backend && npm run deploy:frontend",
+    "deploy:backend": "",
+    "deploy:frontend": "",
+    "postDeploy": "echo 🚀  The application is now fully deployed.",
+    "postSetup": "echo 🎉  The application is now fully installed.",
+    "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
+    "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
+    "setup": "npm i @sanity/cli -g && npm i && cd frontend && npm install && cd ../backend && npm install && cd .."
+  },
+  "engines": {
+    "node": "^v<% replace with node version %>"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not op_mini all"
+  ]
+}

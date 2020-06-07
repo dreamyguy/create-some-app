@@ -1,7 +1,24 @@
 {
   "name": "create-some-app",
-  "version": "1.0.0",
-  "description": "A configurable CLI to bootstrap some app",
+  "version": "1.1.0",
+  "description": "A configurable CLI-based scaffolder that creates some app",
+  "private": false,
+  "keywords": [
+    "create-some-app",
+    "cli app",
+    "cli starter",
+    "cli scaffolder",
+    "cli bootstrapper",
+    "fullstack"
+  ],
+  "author": "Wallace Sidhrée <i@dreamyguy.com> (https://github.com/dreamyguy)",
+  "homepage": "https://github.com/dreamyguy/create-some-app",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dreamyguy/create-some-app.git"
+  },
+  "license": "MIT",
+  "copyright": "Copyright (c) Wallace Sidhrée - All rights reserved.",
   "main": "src/index.js",
   "bin": {
     "@dreamyguy/create-some-app": "bin/create-some-app",
@@ -13,20 +30,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "cli",
-    "create-some-app"
-  ],
-  "author": "Wallace Sidhrée",
-  "license": "MIT",
   "dependencies": {
     "arg": "^4.1.3",
+    "boxen": "^4.2.0",
     "chalk": "^4.0.0",
     "esm": "^3.2.25",
     "execa": "^4.0.2",
     "inquirer": "^7.1.0",
+    "just-kebab-case": "^1.1.0",
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
-    "pkg-install": "^1.0.0"
+    "pkg-install": "^1.0.0",
+    "shelljs": "^0.8.4"
+  },
+  "engines": {
+    "node": "^v12.14.0"
   }
 }
