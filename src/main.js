@@ -105,15 +105,15 @@ function welcome() {
         216,
         0
       )(
-        `👩‍💻 Create Some App 👨‍💻 ${chalk.reset.white(
-          `- v${version}\n\nA configurable CLI-based scaffolder that creates some app`
+        `👩‍💻 Create Some App 👨‍💻\n${chalk.reset.white(
+          `v${version}\n\nA configurable CLI-based scaffolder\nthat creates some app`
         )}`
       ),
       {
         align: "center",
-        borderColor: "#ffd800",
-        borderStyle: "double",
-        dimBorder: true,
+        borderColor: "yellow",
+        borderStyle: "round",
+        dimBorder: false,
         float: "center",
         margin: 1,
         padding: 1,
