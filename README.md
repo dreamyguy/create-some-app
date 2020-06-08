@@ -2,7 +2,7 @@
 
 > 👩‍💻🚀👨‍💻 A configurable CLI-based scaffolder that creates some app!
 
-[![Node Version](https://img.shields.io/badge/node-v12.14.0-brightgreen.svg)](https://github.com/nodejs/node/releases/tag/v12.14.0) [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dreamyguy/create-some-app/blob/master/LICENSE)
+[![Node Version](https://img.shields.io/badge/node-v12.14.0-brightgreen.svg)](https://github.com/nodejs/node/releases/tag/v12.14.0) [![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dreamyguy/create-some-app/blob/master/LICENSE) [![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen)](https://plant.treeware.earth/dreamyguy/create-some-app)
 
 > 👉 _**The project is in ALPHA (work in progress)**_.
 
@@ -113,6 +113,8 @@ Watch this space for highly configurable starters with **React**, **Sanity**, **
 ## License
 
 [MIT](LICENSE)
+
+This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/dreamyguy/create-some-app) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
 
 ## Credits
 
