@@ -46,7 +46,7 @@ async function replaceStrings(options) {
           `git@github.com:${options.repoOwner}/${kebabCase(strInput)}.git`
         );
       }
-      const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" * | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
+      const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" . | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
       if (shelljs.exec(cmd).code !== 0) {
         shelljs.echo(`Error: Failed replaceStrings() for '${type}'`);
         shelljs.exit(1);
@@ -61,7 +61,7 @@ async function replaceStrings(options) {
       if (type === "repoOwner") {
         strInput = kebabCase(strInput);
       }
-      const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" * | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
+      const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" . | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
       if (shelljs.exec(cmd).code !== 0) {
         shelljs.echo(`Error: Failed replaceStrings() for '${type}'`);
         shelljs.exit(1);
