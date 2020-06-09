@@ -33,6 +33,7 @@
     "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
     "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
     "prettier": "prettier --write '**/*.{js,css,scss,html,json,md}'",
+    "release": "npx bump --commit ':rocket: Release v' --tag --push package.json package-lock.json backend/package.json frontend/package.json",
     "server:gatsby": "cd web/ && gatsby serve",
     "server:sanity": "node lib/sanityStart.js",
     "server:web": "node lib/gatsbyStart.js",
@@ -52,6 +53,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@jsdevtools/version-bump-prompt": "^6.0.3",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^10.0.0",

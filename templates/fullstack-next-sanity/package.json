@@ -32,7 +32,11 @@
     "postSetup": "echo 🎉  The application is now fully installed.",
     "preDeploy": "echo ⚡  About to deploy both frontend and backend.",
     "preSetup": "echo ⚡  About to install all dependencies needed in both frontend and backend.",
+    "release": "npx bump --commit ':rocket: Release v' --tag --push package.json package-lock.json backend/package.json frontend/package.json",
     "setup": "npm i @sanity/cli -g && npm i && cd frontend && npm install && cd ../backend && npm install && cd .."
+  },
+  "devDependencies": {
+    "@jsdevtools/version-bump-prompt": "^6.0.3"
   },
   "engines": {
     "node": "^v<% replace with node version %>"
