@@ -3,7 +3,7 @@ import { config } from './config';
 describe('Test config', () => {
   describe('hostname', () => {
     it('hostname', () => {
-      expect(config.hostname).toEqual('http://localhost');
+      expect(config.hostname).toEqual('localhost');
     });
     it('imagesPath', () => {
       expect(config.imagesPath).toEqual('./../images/');
