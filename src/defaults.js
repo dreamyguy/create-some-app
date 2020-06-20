@@ -32,7 +32,7 @@ export default [
   {
     name: "repoOwner",
     message: "What's the name of the repo owner (user/organisation)?",
-    replace: "<% replace with project repo base url %>",
+    replace: "<% replace with project repo owner url %>",
     default: "dreamyguy",
   },
   {

@@ -36,4 +36,4 @@ This mode is especially designed to be integrated into CI processes, and a sligh
 
 > Unlike **Unit Tests**, **Integration Tests** are very time-consuming. **`run`** runs a bit faster than the **`open`** variant, so it's a good mode to use while not working on anything that has an integration test related to it - or simply wanting to check if everything is still fine locally.
 
-> _Both **Unit Tests** and **Integration Tests** are run at [Travis](https://travis-ci.com/github/<% replace with project repo base url %/)'s end, and failure on any of them will abort the deployment to the respective environment, breaking the build._
+> _Both **Unit Tests** and **Integration Tests** are run at [Travis](https://travis-ci.com/github/<% replace with project repo owner url %>)'s end, and failure on any of them will abort the deployment to the respective environment, breaking the build._

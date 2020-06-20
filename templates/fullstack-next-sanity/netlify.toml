@@ -1,0 +1,16 @@
+[build]
+base = "frontend"
+command = "npm run build"
+publish = "public"
+environment = { NODE_ENV = "production", NODE_VERSION = "12" }
+
+# Context specific settings - Overrides [build] settings
+
+# -- Nothing here
+
+# Branch specific settings - Overrides any context specific settings
+
+[context.production.environment] # 'production' is a branch name
+SANITY_DATASET = "production"
+[context.develop.environment] # 'develop' is a branch name
+SANITY_DATASET = "develop"
