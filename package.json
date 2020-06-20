@@ -29,7 +29,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "npx bump --commit ':rocket: Release v' --tag --push package.json package-lock.json templates/fullstack-gatsby-sanity/package.json templates/fullstack-gatsby-sanity/backend/package.json templates/fullstack-gatsby-sanity/frontend/package.json templates/fullstack-next-sanity/package.json templates/fullstack-next-sanity/backend/package.json templates/fullstack-next-sanity/frontend/package.json && npm publish"
+    "release": "HUSKY_SKIP_HOOKS=1 npx bump --commit '🚀 Release v' --tag --push package.json package-lock.json && npm publish"
   },
   "dependencies": {
     "arg": "^4.1.3",

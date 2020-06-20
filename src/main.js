@@ -45,6 +45,9 @@ async function replaceStrings(options) {
         strInput = escapeRegex(
           `git@github.com:${options.repoOwner}/${kebabCase(strInput)}.git`
         );
+      } else if (mode === "create-some-app-version") {
+        strReplace = "<% replace with create-some-app version %>";
+        strInput = escapeRegex(`${version}`);
       }
       const cmd = `grep -rl --exclude-dir={node_modules,dist} --exclude=*.{lock,png,jpg,svg,woff} --exclude=package-lock.json "${strReplace}" . | xargs sed -i '' 's/${strReplace}/${strInput}/g'`;
       if (shelljs.exec(cmd).code !== 0) {
@@ -82,6 +85,7 @@ async function replaceStrings(options) {
     replaceWithDefault(def, "siteUrl");
     replaceDirectly(def, "projectName", "project-name-kebab");
     replaceDirectly(def, "projectName", "project-repo-full-url-ssh");
+    replaceDirectly(def, "projectName", "create-some-app-version");
     return;
   });
   return;
