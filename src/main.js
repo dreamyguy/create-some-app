@@ -97,6 +97,16 @@ async function initGit(options) {
   return;
 }
 
+async function initSetup(options) {
+  const result = await execa("npm", ["run", "setup"], {
+    cwd: options.targetDirectory,
+  });
+  if (result.failed) {
+    return Promise.reject(new Error("Failed to run initial setup"));
+  }
+  return;
+}
+
 function welcome() {
   console.log(
     boxen(
@@ -183,6 +193,15 @@ export async function createSomeApp(options) {
       skip: () =>
         !options.runInstall
           ? "Pass --install to automatically install dependencies"
+          : undefined,
+    },
+    {
+      title: `Run initial setup`,
+      task: () => initSetup(options),
+      enabled: () => options.runSetup,
+      skip: () =>
+        !options.runSetup
+          ? "Pass --setup to automatically setup project at CLI level, or run 'npm run setup' after the CLI is done"
           : undefined,
     },
   ]);

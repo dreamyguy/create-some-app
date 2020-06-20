@@ -42,17 +42,36 @@ When passed, prompts will be skipped. Useful when passing both choices and chose
 
 #### 3. `--git` or `-g`
 
-When passed, `git init` will be run, initialising a `git` repo with all files unstaged. Default is `false`.
+When passed, `git init` will be run, initialising a `git` repo with all files unstaged.
 
     create-some-app fullstack-next-sanity --yes --git
     create-some-app fullstack-next-sanity -y -g
 
 #### 4. `--install` or `-i`
 
-When passed, `npm install` will be run, initialising all dependencies specified in the chosen / tailored `package.json` file.
+When passed, `npm install` will be run, initialising all dependencies specified in `package.json` file for the chosen template/scaffold.
 
     create-some-app fullstack-next-sanity --yes --git --install
     create-some-app fullstack-next-sanity -y -g -i
+
+#### 4. `--setup` or `-s`
+
+When passed, `npm run setup` will be run. This command will:
+
+* Install all dependencies, including those within `frontend` and `backend` folders
+* Create `production` branch
+* Set remote repo
+* Add files
+* Create the first **commit** and push to `production`
+* Create `develop` branch and push to `develop`
+* Create the first **tag** and push it
+
+> 👉It must be used combined with `--git` flag.
+
+```
+create-some-app fullstack-next-sanity --git --install --setup
+create-some-app fullstack-next-sanity -g -i -s
+```
 
 #### 5. `--gatsbyDefaultEnvironment`
 
@@ -96,7 +115,7 @@ When passed, `npm install` will be run, initialising all dependencies specified 
 
 Using the full potential of the CLI, with all options, without even installing it first (using `npx`):
 
-    npx create-some-app fullstack-gatsby-sanity --gatsbyDefaultEnvironment envelope --nodeVersion 12.18.0 --ownersName 'Owner Inc.' --projectName 'Naming Names in the Name' --projectDescription 'Such Wow Description' --repoOwner 'Dreamyguy' --sanityAuthToken lkasjflkjasldfjlkajsdkfjlkajsdfkljsalkjdfsomethingsomething --sanityDataset produccione --sanityProjectId 701kayak107 --siteUrl http://thisistheurl.io --yes --git --install
+    npx create-some-app fullstack-gatsby-sanity --gatsbyDefaultEnvironment envelope --nodeVersion 12.18.0 --ownersName 'Owner Inc.' --projectName 'Naming Names in the Name' --projectDescription 'Such Wow Description' --repoOwner 'Dreamyguy' --sanityAuthToken lkasjflkjasldfjlkajsdkfjlkajsdfkljsalkjdfsomethingsomething --sanityDataset produccione --sanityProjectId 701kayak107 --siteUrl http://thisistheurl.io --yes --git --install --setup
 
 ## What kind of apps are available?
 

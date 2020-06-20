@@ -20,6 +20,7 @@ _ignore
 .env.*
 .eslintignore
 .eslintrc.js
+.huskyrc
 .nvmrc
 .prettierrc
 .travis.yml
