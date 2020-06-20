@@ -54,7 +54,7 @@ When passed, `npm install` will be run, initialising all dependencies specified 
     create-some-app fullstack-next-sanity --yes --git --install
     create-some-app fullstack-next-sanity -y -g -i
 
-#### 4. `--setup` or `-s`
+#### 5. `--setup` or `-s`
 
 When passed, `npm run setup` will be run. This command will:
 
@@ -73,43 +73,43 @@ create-some-app fullstack-next-sanity --git --install --setup
 create-some-app fullstack-next-sanity -g -i -s
 ```
 
-#### 5. `--gatsbyDefaultEnvironment`
+#### 6. `--gatsbyDefaultEnvironment`
 
     create-some-app --gatsbyDefaultEnvironment production
 
-#### 6. `--nodeVersion`
+#### 7. `--nodeVersion`
 
     create-some-app --nodeVersion 12.18.0
 
-#### 7. `--ownersName`
+#### 8. `--ownersName`
 
     create-some-app --ownersName 'Owner Inc.'
 
-#### 8. `--projectName`
+#### 9. `--projectName`
 
     create-some-app --projectName 'Nice Project Name'
 
-#### 9. `--projectDescription`
+#### 10. `--projectDescription`
 
     create-some-app --projectDescription 'Such Wow Description'
 
-#### 10. `--repoOwner`
+#### 11. `--repoOwner`
 
     create-some-app --repoOwner dreamyguy
 
-#### 11. `--sanityAuthToken`
+#### 12. `--sanityAuthToken`
 
     create-some-app --sanityAuthToken lkasjflkjasldfjlkajsdkfjlkajsdfkljsalkjdfsomethingsomething
 
-#### 12. `--sanityProjectId`
+#### 13. `--sanityProjectId`
 
     create-some-app --sanityProjectId 701kayak107
 
-#### 13. `--sanityDataset`
+#### 14. `--sanityDataset`
 
     create-some-app --sanityDataset production
 
-#### 14. `--siteUrl`
+#### 15. `--siteUrl`
 
     create-some-app --siteUrl http://thisistheurl.io
 
@@ -142,8 +142,6 @@ This package is [Treeware](https://treeware.earth). If you use it in production,
 
 - Dominik Kundel 🇺🇲 - [@dkundel](https://github.com/dkundel) - [create-project](https://github.com/dkundel/create-project)
 - Nader Dabit 🇺🇲 - [@dabit3](https://github.com/dabit3) - [create-new-cli](https://www.npmjs.com/package/create-new-cli)
-
-_More to come!_
 
 ## About
 
