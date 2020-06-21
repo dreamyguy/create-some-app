@@ -66,7 +66,7 @@ When passed, `npm run setup` will be run. This command will:
 * Create `develop` branch and push to `develop`
 * Create the first **tag** and push it
 
-> 👉It must be used combined with `--git` flag.
+> 👉 It must be used combined with `--git` flag.
 
 ```
 create-some-app fullstack-next-sanity --git --install --setup
@@ -77,17 +77,36 @@ create-some-app fullstack-next-sanity -g -i -s
 
     create-some-app --gatsbyDefaultEnvironment production
 
+> 👉 This will be added to `.envExample` files, that should be renamed to `.env` and **not committed/tracked by `git`**.
+
 #### 7. `--nodeVersion`
 
     create-some-app --nodeVersion 12.18.0
+
+This is meant as a way to both document _and_ require the `node` version used at the time of the install, so that contributors know which version they should use.
 
 #### 8. `--ownersName`
 
     create-some-app --ownersName 'Owner Inc.'
 
+Used at **LICENSE** and `package.json` level, for copyright purposes.
+
 #### 9. `--projectName`
 
     create-some-app --projectName 'Nice Project Name'
+
+This name will be injected in several places of the application, so it's important to get it right. It will be injected as/at:
+
+* Repository's name
+* `package.json` files
+* README files
+* Configuration files
+* Github repo urls
+* Travis build status urls
+* Netlify urls
+* Badges urls
+
+If you pass `La la la` or `LaLaLa`, the project name will become `la-la-la` (because of the conversion to _kebak-case_), which is OK if that's what you want. If you use `Lalala` or `lalala` you'll get `lalala`. Keep it in mind when naming your project.
 
 #### 10. `--projectDescription`
 
@@ -97,17 +116,33 @@ create-some-app fullstack-next-sanity -g -i -s
 
     create-some-app --repoOwner dreamyguy
 
+This name will be injected in several places of the application, so it's important to get it right. It will be injected at
+
+* Github repo urls
+* Travis build status urls
+* Badges urls
+
+If you pass `La la la` or `LaLaLa`, the repo owner's name will become `la-la-la` (because of the conversion to _kebak-case_), which is OK if that's what you want. Keep it in mind when naming the repo owner.
+
 #### 12. `--sanityAuthToken`
 
     create-some-app --sanityAuthToken lkasjflkjasldfjlkajsdkfjlkajsdfkljsalkjdfsomethingsomething
+
+> 👉 This will be added to `.envExample` files, that should be renamed to `.env` and **not committed/tracked by `git`**.
 
 #### 13. `--sanityProjectId`
 
     create-some-app --sanityProjectId 701kayak107
 
+> 👉 This will be added to `.envExample` files, that should be renamed to `.env` and **not committed/tracked by `git`**.
+
 #### 14. `--sanityDataset`
 
     create-some-app --sanityDataset production
+
+This will be added to the local **Netlify**'s config, which overrides their remote UI settings.
+
+> 👉 This will also be added to `.envExample` files, that should be renamed to `.env` and **not committed/tracked by `git`**.
 
 #### 15. `--siteUrl`
 
@@ -119,7 +154,10 @@ Using the full potential of the CLI, with all options, without even installing i
 
 ## What kind of apps are available?
 
-_Currently only two_: **Fullstack Gatsby Sanity** and **Fullstack Next Sanity**. _None of them are fully functional at the moment. The project is in ALPHA (work in progress)._
+* [Fullstack Gatsby Sanity](templates/fullstack-gatsby-sanity)
+* [Fullstack Next Sanity](templates/fullstack-next-sanity)
+
+> 👉 _None of them are fully functional at the moment. The project is in ALPHA (work in progress)._
 
 Watch this space for highly configurable starters with **React**, **Sanity**, **Gatsby**, **NextJs**, **Bit** integration, extensive testing and many other goodies, all bundlet as options within **create-some-app**.
 
@@ -134,7 +172,7 @@ Watch this space for highly configurable starters with **React**, **Sanity**, **
 
 [MIT](LICENSE)
 
-This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/dreamyguy/create-some-app) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
+This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/dreamyguy/create-some-app) to thank us for our work. By contributing to the Treeware forest you'll be creating employment for local families and restoring wildlife habitats.
 
 ## Credits
 
