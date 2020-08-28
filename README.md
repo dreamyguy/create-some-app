@@ -2,7 +2,7 @@
 
 > 👩‍💻🚀👨‍💻 A configurable CLI-based scaffolder that creates some app!
 
-[![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dreamyguy/create-some-app/blob/master/LICENSE) [![GitHub release](https://img.shields.io/github/v/tag/dreamyguy/create-some-app.svg?sort=semver)](https://github.com/dreamyguy/create-some-app/releases) [![Node Version](https://img.shields.io/badge/node-v12.14.0-blue.svg)](https://github.com/nodejs/node/releases/tag/v12.14.0) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/dreamyguy/create-some-app/graphs/commit-activity) [![GitHub contributors](https://img.shields.io/github/contributors/dreamyguy/create-some-app.svg)](https://gitHub.com/dreamyguy/create-some-app/graphs/contributors/) [![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen)](https://plant.treeware.earth/dreamyguy/create-some-app)
+[![MIT Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dreamyguy/create-some-app/blob/master/LICENSE) [![GitHub release](https://img.shields.io/github/v/tag/dreamyguy/create-some-app.svg?sort=semver)](https://github.com/dreamyguy/create-some-app/releases) [![Node Version](https://img.shields.io/badge/node-v12.18.3-blue.svg)](https://github.com/nodejs/node/releases/tag/v12.18.3) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/dreamyguy/create-some-app/graphs/commit-activity) [![GitHub contributors](https://img.shields.io/github/contributors/dreamyguy/create-some-app.svg)](https://gitHub.com/dreamyguy/create-some-app/graphs/contributors/) [![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen)](https://plant.treeware.earth/dreamyguy/create-some-app)
 
 > 👉 _**The project is in ALPHA (work in progress)**_.
 
@@ -58,13 +58,13 @@ When passed, `npm install` will be run, initialising all dependencies specified 
 
 When passed, `npm run setup` will be run. This command will:
 
-* Install all dependencies, including those within `frontend` and `backend` folders
-* Create `production` branch
-* Set remote repo
-* Add files
-* Create the first **commit** and push to `production`
-* Create `develop` branch and push to `develop`
-* Create the first **tag** and push it
+- Install all dependencies, including those within `frontend` and `backend` folders
+- Create `production` branch
+- Set remote repo
+- Add files
+- Create the first **commit** and push to `production`
+- Create `develop` branch and push to `develop`
+- Create the first **tag** and push it
 
 > 👉 It must be used combined with `--git` flag.
 
@@ -97,14 +97,14 @@ Used at **LICENSE** and `package.json` level, for copyright purposes.
 
 This name will be injected in several places of the application, so it's important to get it right. It will be injected as/at:
 
-* Repository's name
-* `package.json` files
-* README files
-* Configuration files
-* Github repo urls
-* Travis build status urls
-* Netlify urls
-* Badges urls
+- Repository's name
+- `package.json` files
+- README files
+- Configuration files
+- Github repo urls
+- Travis build status urls
+- Netlify urls
+- Badges urls
 
 If you pass `La la la` or `LaLaLa`, the project name will become `la-la-la` (because of the conversion to _kebak-case_), which is OK if that's what you want. If you use `Lalala` or `lalala` you'll get `lalala`. Keep it in mind when naming your project.
 
@@ -118,9 +118,9 @@ If you pass `La la la` or `LaLaLa`, the project name will become `la-la-la` (bec
 
 This name will be injected in several places of the application, so it's important to get it right. It will be injected at
 
-* Github repo urls
-* Travis build status urls
-* Badges urls
+- Github repo urls
+- Travis build status urls
+- Badges urls
 
 If you pass `La la la` or `LaLaLa`, the repo owner's name will become `la-la-la` (because of the conversion to _kebak-case_), which is OK if that's what you want. Keep it in mind when naming the repo owner.
 
@@ -154,8 +154,8 @@ Using the full potential of the CLI, with all options, without even installing i
 
 ## What kind of apps are available?
 
-* [Fullstack Gatsby Sanity](templates/fullstack-gatsby-sanity)
-* [Fullstack Next Sanity](templates/fullstack-next-sanity)
+- [Fullstack Gatsby Sanity](templates/fullstack-gatsby-sanity)
+- [Fullstack Next Sanity](templates/fullstack-next-sanity)
 
 > 👉 _None of them are fully functional at the moment. The project is in ALPHA (work in progress)._
 
